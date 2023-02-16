@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snacko_app/events/events.dart';
 import 'package:snacko_app/home/dashboard_mobile.dart';
 import 'package:snacko_app/snackbar/snackbar_desktop.dart';
 import 'package:snacko_app/snackbar/snackbar_mobile.dart';
@@ -7,6 +8,8 @@ import 'package:snacko_app/vote/vote.dart';
 import 'package:snacko_app/vote/vote_desktop.dart';
 import 'package:snacko_app/vote/vote_mobile.dart';
 
+import 'events/events_desktop.dart';
+import 'events/events_mobile.dart';
 import 'home/dashboard.dart';
 import 'home/dashboard_desktop.dart';
 
@@ -46,7 +49,11 @@ class MyApp extends StatelessWidget {
         '/vote': (context) => Vote(
               vote_desktop: const VoteDesktop(),
               vote_mobile: const VoteMobile(),
-            )
+            ),
+        '/events': (context) => Events(
+              events_desktop: const EventsDesktop(),
+              events_mobile: const EventsMobile(),
+            ),
       },
     );
   }

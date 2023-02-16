@@ -71,11 +71,17 @@ class myDrawer extends StatelessWidget {
         ),
         Padding(
           padding: tilePadding,
-          child: ListTile(
-            leading: const Icon(Icons.event_available),
-            title: Text(
-              'E V E N T S',
-              style: drawerTextColor,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.pushNamed(context, '/events');
+            },
+            child: ListTile(
+              leading: const Icon(Icons.event_available),
+              title: Text(
+                'E V E N T S',
+                style: drawerTextColor,
+              ),
             ),
           ),
         ),
