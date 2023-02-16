@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:snacko_app/committees/committees.dart';
+import 'package:snacko_app/committees/committees_desktop.dart';
+import 'package:snacko_app/committees/committees_mobile.dart';
 import 'package:snacko_app/events/events.dart';
 import 'package:snacko_app/home/dashboard_mobile.dart';
 import 'package:snacko_app/meetings/meetings.dart';
@@ -67,6 +70,10 @@ class MyApp extends StatelessWidget {
         '/meetings': (context) => Meetings(
               meetings_desktop: const MeetingsDesktop(),
               meetings_mobile: const MeetingsMobile(),
+            ),
+        '/committees': (context) => Committees(
+              committees_desktop: const CommitteesDesktop(),
+              committees_mobile: const CommitteesMobile(),
             ),
       },
     );
