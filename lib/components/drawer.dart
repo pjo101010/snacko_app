@@ -103,11 +103,17 @@ class myDrawer extends StatelessWidget {
         ),
         Padding(
           padding: tilePadding,
-          child: ListTile(
-            leading: const Icon(Icons.meeting_room_sharp),
-            title: Text(
-              'M E E T I N G S',
-              style: drawerTextColor,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.pushNamed(context, '/meetings');
+            },
+            child: ListTile(
+              leading: const Icon(Icons.meeting_room_sharp),
+              title: Text(
+                'M E E T I N G S',
+                style: drawerTextColor,
+              ),
             ),
           ),
         ),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:snacko_app/events/events.dart';
 import 'package:snacko_app/home/dashboard_mobile.dart';
+import 'package:snacko_app/meetings/meetings.dart';
+import 'package:snacko_app/meetings/meetings_desktop.dart';
+import 'package:snacko_app/meetings/meetings_mobile.dart';
 import 'package:snacko_app/snackbar/snackbar_desktop.dart';
 import 'package:snacko_app/snackbar/snackbar_mobile.dart';
 import 'package:snacko_app/snackbar/snacko.dart';
@@ -60,6 +63,10 @@ class MyApp extends StatelessWidget {
         '/venue': (context) => Venue(
               venue_desktop: const VenueDesktop(),
               venue_mobile: const VenueMobile(),
+            ),
+        '/meetings': (context) => Meetings(
+              meetings_desktop: const MeetingsDesktop(),
+              meetings_mobile: const MeetingsMobile(),
             ),
       },
     );
